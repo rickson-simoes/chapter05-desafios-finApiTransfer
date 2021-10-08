@@ -9,12 +9,12 @@ export class BalanceMap {
       type,
       created_at,
       updated_at,
-      user_id
+      sender_id
     }) => {
       if (type === 'transfer') {
         return {
           id,
-          sender_id: user_id,
+          sender_id,
           amount: Number(amount),
           description,
           type,
